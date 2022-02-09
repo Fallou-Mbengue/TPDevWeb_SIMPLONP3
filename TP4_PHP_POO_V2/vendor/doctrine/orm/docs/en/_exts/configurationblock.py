@@ -53,7 +53,7 @@ class ConfigurationBlock(Directive):
         self.state.nested_parse(self.content, self.content_offset, node)
 
         entries = []
-        for i, child in enumerate(node):
+        for child in node:
             if isinstance(child, nodes.literal_block):
                 # add a title (the language name) before each block
                 #targetid = "configuration-block-%d" % env.new_serialno('configuration-block')
